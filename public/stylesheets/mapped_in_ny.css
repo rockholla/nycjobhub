@@ -1,0 +1,1183 @@
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+html {
+    font-size: 100%;
+}
+html, button, input, select, textarea {
+    color: #000000;
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0;
+}
+*::-moz-selection {
+    background: none repeat scroll 0 0 #8FCDDE;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+a {
+    color: #5D8DA4;
+}
+a:visited {
+    color: #5D8DA4;
+}
+a:hover {
+    color: #333333;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover, a:active {
+    outline: 0 none;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, strong {
+    font-weight: bold;
+}
+blockquote {
+    margin: 1em 40px;
+}
+dfn {
+    font-style: italic;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC -moz-use-text-color -moz-use-text-color;
+    border-right: 0 none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+}
+ins {
+    background: none repeat scroll 0 0 #FFFF99;
+    color: #000000;
+    text-decoration: none;
+}
+mark {
+    background: none repeat scroll 0 0 #FFFF00;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+}
+pre, code, kbd, samp {
+    font-family: monospace,serif;
+    font-size: 1em;
+}
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q {
+    quotes: none;
+}
+q:before, q:after {
+    content: none;
+}
+small {
+    font-size: 85%;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+ul, ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+dd {
+    margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 0;
+}
+form {
+    margin: 0;
+}
+fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+label {
+    cursor: pointer;
+}
+legend {
+    border: 0 none;
+    padding: 0;
+    white-space: normal;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+button, input {
+    line-height: normal;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+button[disabled], input[disabled] {
+    cursor: default;
+}
+input[type="checkbox"], input[type="radio"] {
+    padding: 0;
+}
+input[type="search"] {
+    -moz-box-sizing: content-box;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+    vertical-align: top;
+}
+input:valid, textarea:valid {
+}
+input:invalid, textarea:invalid {
+    background-color: #F0DDDD;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td {
+    vertical-align: top;
+}
+.chromeframe {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: black;
+    margin: 0.2em 0;
+    padding: 0.2em 0;
+}
+html, body {
+    border: 0 none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#terms-privacy {
+    margin: 0 auto;
+    width: 780px;
+}
+.infoWindowScroll {
+    max-height: 250px;
+    overflow-y: auto;
+}
+.infoWindowScroll ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 5px 0 0;
+}
+.infoWindowScroll li {
+    list-style: none outside none;
+    padding: 5px 5px 5px 50px;
+}
+#embed-wrap {
+    height: 700px;
+    position: relative;
+    width: 589px;
+}
+#header-hiring {
+    background: url("../img/bg.png") repeat scroll 0 0 #ABABAB;
+    color: #FFFFFF;
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    padding: 4px;
+    text-align: center;
+}
+#header-hiring strong {
+    color: #FFFFFF;
+}
+#header {
+    background: url("../img/blueprint2.png") repeat scroll 0 0 transparent;
+    height: 70px;
+}
+.embed #header {
+    background: url("../img/blueprint2.png") repeat scroll 0 0 transparent;
+    height: 50px;
+}
+#header-content {
+    padding: 10px;
+}
+#logo {
+    float: left;
+    height: 50px;
+    width: 540px;
+}
+#logo h1 {
+    color: #ED145B;
+    float: left;
+    font-family: "jubilat",sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px 0 0;
+}
+.embed #logo {
+    float: left;
+    height: 50px;
+    width: 410px;
+}
+.embed #logo h1 {
+    float: left;
+    font-family: "jubilat",sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.embed #btn-add {
+    background: url("../img/add-circle.png") no-repeat scroll 0 0 #333333;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: "museo-sans",sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    margin-left: 12px;
+    margin-top: 0;
+    padding: 6px 12px 5px 30px;
+    text-decoration: none;
+}
+.embed #btn-add:hover {
+    background-color: #666666;
+}
+.other {
+    color: #666666;
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+#btn-add {
+    background: url("../img/add-circle.png") no-repeat scroll 0 0 #333333;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    margin-left: 12px;
+    margin-top: 10px;
+    padding: 5px 12px 5px 30px;
+    text-decoration: none;
+}
+#btn-add:hover {
+    background-color: #666666;
+}
+.btn-generic {
+    background: url("../img/next-circle.png") no-repeat scroll right center #666666;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF !important;
+    display: block;
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 10px;
+    padding: 12px 30px 12px 12px;
+    text-decoration: none;
+    width: 200px;
+}
+.embed .btn-generic {
+    background: url("../img/next-circle.png") no-repeat scroll right center #666666;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF !important;
+    display: block;
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    padding: 12px 30px 12px 12px;
+    text-decoration: none;
+    width: 200px;
+}
+.btn-generic:hover {
+    background-color: #999999;
+    color: #FFFFFF;
+}
+.btn-findit {
+    background-color: #666666;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    display: block;
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 75px;
+}
+.btn-findit:hover {
+    background-color: #999999;
+    color: #FFFFFF;
+}
+.btn-place {
+    background-color: #8FCDDE;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: "museo-sans",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 160px;
+}
+.btn-place:hover {
+    background-color: #999999;
+    color: #FFFFFF;
+}
+#btn-middle1 {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 242px;
+}
+.embed #btn-middle1 {
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 242px;
+}
+#iwny-logo {
+    padding-left: 20px;
+}
+.embed #iwny-logo {
+    padding-left: 10px;
+}
+#nycdigital {
+    color: #333333;
+    float: right;
+    margin-top: -3px;
+    text-align: right;
+    width: 238px;
+}
+.embed #nycdigital {
+    color: #333333;
+    float: right;
+    margin-top: 0;
+    text-align: right;
+    width: 138px;
+}
+#main {
+    height: 500px;
+    position: relative;
+}
+#map_canvas {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 250px;
+    top: 0;
+}
+#sidebar {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+}
+#drawer {
+    margin-left: -250px;
+    width: 500px;
+}
+#credits {
+    background-color: #333333;
+    bottom: 0;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+#social {
+    float: left;
+    padding-left: 10px;
+    padding-top: 8px;
+    width: 180px;
+}
+#credits-inner {
+    float: right;
+    padding: 7px;
+    text-align: right;
+    width: 430px;
+}
+#credits-inner a {
+    color: #CCCCCC;
+    font-size: 11px;
+}
+#credits-inner a:hover {
+    color: #DEDEDE;
+}
+#btn-about {
+    color: #89CFF0 !important;
+}
+#btn-about:hover {
+    color: #DEDEDE !important;
+}
+#venue-detail {
+    background-color: #F8F8F8;
+    float: left;
+    height: 100%;
+    outline: medium none;
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+}
+#venue-meta {
+    border-bottom: 2px solid #CCCCCC;
+    color: #000000;
+    padding: 10px 10px 20px;
+}
+#edits {
+    color: #999999 !important;
+    font-size: 10px !important;
+    padding-top: 20px;
+}
+#edits a {
+    color: #999999 !important;
+}
+#venue-meta h1 {
+    font-family: "jubilat",sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+#venue-hiring {
+    background-color: #F5D2CF;
+    color: #333333;
+    margin-top: 10px;
+    padding: 5px;
+}
+#venue-hiring a {
+    color: #333333;
+    font-size: 12px;
+}
+#venue-hiring a:hover {
+    color: #000000 !important;
+}
+.maptext {
+    color: #999999;
+    font-family: "museo-sans",sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    overflow: hidden;
+    padding-left: 50px;
+}
+.maptext strong {
+    color: #000000;
+    font-family: "jubilat",sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+}
+.maptext-list {
+    color: #999999;
+    font-family: "museo-sans",sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    overflow: hidden;
+}
+.maptext-list strong {
+    color: #000000;
+    font-family: "jubilat",sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+}
+#btn-back {
+    background-color: #333333;
+    color: #FFFFFF;
+    display: block;
+    font-family: "jubilat",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 5px 10px;
+    text-align: right;
+    text-decoration: none;
+}
+#btn-back:hover {
+    background-color: #5D8DA4;
+}
+#venues {
+    float: right;
+    height: 100%;
+    outline: medium none;
+    overflow: auto;
+    width: 250px;
+}
+#dropdown {
+    background: url("../img/drop.png") no-repeat scroll 0 0 #333333;
+    color: #FFFFFF;
+    display: none;
+    font-family: "jubilat",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    padding: 5px;
+    text-decoration: none;
+}
+#dropdown:hover {
+    background-color: #474747;
+}
+#dropdown-choices {
+}
+#dropdown-choices ul {
+    border-bottom: 2px solid #CCCCCC;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#dropdown-choices li {
+    background-color: #FFFFFF !important;
+    color: #666666;
+    font-size: 11px !important;
+    margin: 0;
+    padding: 0;
+}
+#dropdown-choices li a {
+    color: #5D8DA4 !important;
+    display: block;
+    font-size: 11px !important;
+    padding: 10px 10px 10px 50px;
+    text-decoration: none;
+}
+#dropdown-choices li a:hover {
+    background-color: #EEEEEE !important;
+}
+.section-selected, .section-selected:hover {
+    background-color: #EEEEEE !important;
+}
+#loader {
+    display: none;
+    height: 10px;
+    margin-top: -13px;
+    width: 250px;
+}
+#venue-list {
+    background-color: #F8F8F8;
+    outline: medium none;
+    overflow: auto;
+    width: 250px;
+}
+#venue-list ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#venue-list li {
+    border-top: 1px solid #EEEEEE;
+}
+#venue-list li:last-child {
+    border-bottom: 1px solid #EEEEEE;
+}
+#venue-list li a {
+    background-color: #F8F8F8;
+    display: block;
+    line-height: 12px;
+    padding: 20px 5px 20px 50px;
+    text-decoration: none;
+}
+#venue-list li a:hover {
+    background-color: #EEEEEE;
+}
+#venue-list2 {
+    background-color: #F8F8F8;
+    outline: medium none;
+    overflow: auto;
+    width: 250px;
+}
+#venue-list2 ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#venue-list2 li {
+    border-top: 1px solid #EEEEEE;
+}
+#venue-list2 li:last-child {
+    border-bottom: 1px solid #EEEEEE;
+}
+#venue-list2 li a {
+    background-color: #F8F8F8;
+    display: block;
+    line-height: 12px;
+    padding: 20px 5px 20px 50px;
+    text-decoration: none;
+}
+#venue-list2 li a:hover {
+    background-color: #EEEEEE;
+}
+.venue-hiring {
+    background-color: #F5D2CF;
+    color: #333333;
+    font-size: 10px;
+    padding: 2px;
+}
+.venue-hiring-detail {
+    background: url("../img/hiring.png") no-repeat scroll right top transparent;
+}
+.venue-name {
+    color: #000000;
+    font-family: "jubilat",sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+.venue-address, .street-address {
+    color: #8C8C8C;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+#venue-type {
+    color: #000000;
+    font-family: "museo-sans",sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+.dontshow {
+    display: none;
+}
+#add-company {
+    background-color: #000000;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    display: none;
+    height: 480px;
+    overflow: hidden;
+    width: 720px;
+}
+.embed #add-company {
+    background-color: #000000;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    display: none;
+    height: 480px;
+    overflow: hidden;
+    width: 540px;
+}
+#company-slides {
+    height: 480px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 5000px;
+}
+.company-slide {
+    float: left;
+    height: 480px;
+    width: 720px;
+}
+.embed .company-slide {
+    float: left;
+    height: 480px;
+    width: 540px;
+}
+.company-slide h1 {
+    color: #8FCDDE;
+    font-family: "jubilat",sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 0;
+    padding-top: 0;
+}
+.company-slide input[type="text"] {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #111111;
+    border-color: -moz-use-text-color -moz-use-text-color #CCCCCC;
+    border-style: none none dashed;
+    border-width: medium medium 1px;
+    color: #89CFF0;
+    font-family: "felt-tip-roman",sans-serif !important;
+    font-size: 18px;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    outline: medium none;
+    padding: 3px;
+    width: 250px;
+}
+.embed .company-slide input[type="text"] {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #111111;
+    border-color: -moz-use-text-color -moz-use-text-color #CCCCCC;
+    border-style: none none dashed;
+    border-width: medium medium 1px;
+    color: #89CFF0;
+    font-family: "felt-tip-roman",sans-serif !important;
+    font-size: 18px;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    outline: medium none;
+    padding: 3px;
+    width: 220px;
+}
+.company-slide label {
+    font-size: 11px;
+    font-weight: 700;
+}
+.company-slide textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #000000;
+    border-color: -moz-use-text-color -moz-use-text-color #CCCCCC;
+    border-style: none none dashed;
+    border-width: medium medium 1px;
+    color: #89CFF0;
+    font-family: "felt-tip-roman",sans-serif !important;
+    font-size: 16px;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    height: 167px;
+    outline: medium none;
+    padding: 3px;
+    width: 300px;
+}
+.embed .company-slide textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #000000;
+    border-color: -moz-use-text-color -moz-use-text-color #CCCCCC;
+    border-style: none none dashed;
+    border-width: medium medium 1px;
+    color: #89CFF0;
+    font-family: "felt-tip-roman",sans-serif !important;
+    font-size: 16px;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    height: 167px;
+    outline: medium none;
+    padding: 3px;
+    width: 220px;
+}
+.company-slide fieldset {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.slidepad {
+    background-color: #111111;
+    border: 1px solid #333333;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+}
+.mapbg {
+    background: url("../img/map-bg.jpg") repeat scroll 0 0 transparent;
+}
+.pad40 {
+    padding-top: 20px !important;
+}
+.info-left {
+    float: left;
+    padding-top: 20px;
+    width: 310px;
+}
+.info-right {
+    float: right;
+    padding-top: 20px;
+    width: 310px;
+}
+.embed .info-left {
+    float: left;
+    padding-top: 10px;
+    width: 220px;
+}
+.embed .info-right {
+    float: right;
+    padding-top: 10px;
+    width: 220px;
+}
+#map_canvas_info {
+    border: 5px solid #333333;
+    height: 295px;
+    width: 305px;
+}
+.embed #map_canvas_info {
+    border: 5px solid #333333;
+    height: 250px;
+    width: 220px;
+}
+#btn-next-slide2 {
+    display: none;
+}
+#submit-area {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 242px;
+}
+#submit-terms {
+    padding-top: 10px;
+    text-align: center;
+}
+.req {
+    color: #FF0000;
+}
+#results {
+    display: none;
+}
+#why-nyc {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 10px;
+    padding: 10px;
+}
+#why-nyc-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.gored {
+    color: #FF0000;
+}
+.venu-meta-hiring {
+    background: url("../img/") repeat scroll 0 0 transparent;
+}
+#about {
+    background-color: #000000;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    display: none;
+    height: 560px;
+    width: 720px;
+}
+.embed #about {
+    background-color: #000000;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    display: none;
+    height: 560px;
+    width: 540px;
+}
+#about h1 {
+    color: #8FCDDE;
+    font-family: "jubilat",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 20px;
+}
+#about-inner {
+    overflow: auto;
+}
+.list-digital {
+    background: url("../img/bg-digital.png") no-repeat scroll left center transparent;
+}
+.list-investors {
+    background: url("../img/bg-investors.png") no-repeat scroll left center transparent;
+}
+.list-coworking {
+    background: url("../img/bg-coworking.png") no-repeat scroll left center transparent;
+}
+.list-nyc {
+    background: url("../img/bg-nyc.png") no-repeat scroll left center transparent;
+}
+.list-hiring {
+    background: url("../img/bg-hiring.png") no-repeat scroll left center transparent;
+}
+.list-made {
+    background: url("../img/bg-made.png") no-repeat scroll left center transparent;
+}
+#cluster-explain {
+    background: url("../img/bg-cluster.png") no-repeat scroll left center #FFFFFF;
+    border-top: 2px solid #CCCCCC;
+    color: #666666;
+    font-size: 11px !important;
+    height: 33px;
+    padding: 5px 10px 5px 50px !important;
+    position: relative;
+    z-index: 300;
+}
+.cluster2 {
+    color: #79BF40;
+}
+.cluster10 {
+    color: #FFBF00;
+}
+.cluster100 {
+    color: #FF0000;
+}
+.sidebar1 {
+    background: url("../img/RosenbergMan.jpg") repeat-y scroll 0 0 transparent;
+}
+.sidebar3 {
+    background: url("../img/FocusBrooklyn.jpg") repeat-y scroll 0 0 transparent;
+}
+.sidebar4 {
+    background: url("../img/PodolskyManhattan.jpg") repeat-y scroll 0 0 transparent;
+}
+.sidebar5 {
+    background: url("../img/JohanssonMan.jpg") repeat-y scroll 0 0 transparent;
+}
+.sidebar6 {
+    background: url("../img/MiltonWashington.jpg") repeat-y scroll 0 0 transparent;
+}
+#venue-bg-credits {
+    background-color: #000000;
+    bottom: 0;
+    font-size: 11px;
+    left: 0;
+    padding: 0 2px;
+    position: absolute;
+}
+#search-bar {
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+}
+#search-field {
+    border: 1px solid #CCCCCC;
+    border-radius: 6px 6px 6px 6px;
+    padding-left: 10px;
+    width: 220px;
+}
+.jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+.jspPane {
+    position: absolute;
+}
+.jspVerticalBar {
+    background: none repeat scroll 0 0 #5D8DA4;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+}
+.jspHorizontalBar {
+    background: none repeat scroll 0 0 #5D8DA4;
+    bottom: 0;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+.jspCap {
+    display: none;
+}
+.jspHorizontalBar .jspCap {
+    float: left;
+}
+.jspTrack {
+    background: none repeat scroll 0 0 #CCCCCC;
+    position: relative;
+}
+.jspDrag {
+    background: none repeat scroll 0 0 #5D8DA4;
+    cursor: pointer;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+.jspArrow {
+    background: none repeat scroll 0 0 #CCCCCC;
+    cursor: pointer;
+    display: block;
+    text-indent: -20000px;
+}
+.jspArrow.jspDisabled {
+    background: none repeat scroll 0 0 #CCCCCC;
+    cursor: default;
+}
+.jspVerticalBar .jspArrow {
+    height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+    float: left;
+    height: 100%;
+    width: 10px;
+}
+.jspVerticalBar .jspArrow:focus {
+    outline: medium none;
+}
+.jspCorner {
+    background: none repeat scroll 0 0 #EEEEEE;
+    float: left;
+    height: 100%;
+}
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0 none;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+.ir br {
+    display: none;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.visuallyhidden {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+.invisible {
+    visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+}
+* {
+    background: none repeat scroll 0 0 transparent !important;
+    box-shadow: none !important;
+    color: black !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+a, a:visited {
+    text-decoration: underline;
+}
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+}
+pre, blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+}
+thead {
+    display: table-header-group;
+}
+tr, img {
+    page-break-inside: avoid;
+}
+img {
+    max-width: 100% !important;
+}
+p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+}
+h2, h3 {
+    page-break-after: avoid;
+}

@@ -1,0 +1,33 @@
+<div id="header">
+	<div id="header-content">
+		<div id="logo">
+			<%= link_to image_tag("logo_vert_h60.png", :alt => "NYC JOB HUB"), root_path %>
+		</div>
+		
+		<ul id="menu-main">
+			<li id="jobs-menu-button" style="border-right:0;">
+				<%= link_to raw("<strong>Search</strong><span>for jobs</span>"), '#'  %>
+				<!-- link_to "view", :controller => 'sessions', :action => 'load', :id => customer.id -->
+				<!-- link_to "delete", logentry, :method => :delete, :remote => true, :confirm => "You sure?", :title => "Delete Log Entry" -->
+			</li>
+			
+			<li id="resume-menu-button" style="border-right:0;">
+				<%= link_to raw("<strong>Build</strong><span>a resume</span>"), '#' %>
+			</li>
+			
+			<li id="faq-menu-button" style="border-right:0;">
+				<%= link_to raw("<strong>Questions</strong><span>frequently asked</span>"), '#' %>
+			</li>
+			
+			<li id="login-menu-button">
+				<%= link_to raw("<strong>Log In</strong><span>to your account</span>"), '#' %>
+			</li>
+		</ul>
+		
+		<div id="header-content-right">
+		</div>
+	</div>
+	
+	<div id="nav-arrow">
+	</div>
+</div>

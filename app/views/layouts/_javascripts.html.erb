@@ -1,0 +1,195 @@
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js", "rails" %>
+<%= javascript_include_tag "application.js" %>
+<%= javascript_include_tag "jquery.purr.js" %>
+<%= javascript_include_tag "jquery.qtip.js" %>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFylcnKxnKH57YCbc6VfO2yvRH0I2EU20&sensor=true"></script>
+<script type="text/javascript">
+$(document).ready(function() {	
+	
+	// console.log("hello world");
+	resizeMe();
+	
+	// load googlemap
+	function resizeMe() {
+		var h = $(window).height();
+		var w = $(window).width();
+		$("#main").height(h - $("#header").height() - $("#credits").height());
+		$("#map-canvas").height($("#main").height());
+		$("#map-canvas").width(w);
+		console.log($("#map-canvas").height().toString());
+		console.log($("#map-canvas").width().toString());
+	}
+	
+  	function initialize() {
+		var mapStyle = [
+		{
+			featureType: "road",
+			elementType: "geometry",
+			stylers: [
+				{ hue: "#ffffff" },
+				{ lightness: 100 }
+			]
+		},
+		{
+			featureType: "road",
+			elementType: "labels",
+			stylers: [
+				{ visibility: "on" },
+				{ lightness: 6 },
+				{ hue: "#fff700" }
+			]
+		},
+		{
+			featureType: "water",
+			stylers: [
+				{ hue: "#89cff0" }
+			]
+		},
+		{
+			featureType: "transit.line",
+			stylers: [
+				{ visibility: "on" }
+			]
+		}
+		];
+	
+    	var mapOptions = {
+			center: new google.maps.LatLng(40.7346688,-73.9897484),
+			zoom: 13,
+			minZoom: 12,
+			maxZoom: 20,
+			panControl: false,
+			zoomControl: true,
+			zoomControlOptions: {
+				style: google.maps.ZoomControlStyle.SMALL
+			},
+			mapTypeControl: false,
+			scaleControl: false,
+			streetViewControl: false,
+			overviewMapControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			styles: mapStyle
+		};
+	
+    	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+	
+	$(window).bind("resize", function(){
+		resizeMe();
+	});
+
+
+	// nav-arrow handling
+	var logoWidth = 80;
+	var jobsButtonWidth = document.getElementById('jobs-menu-button').offsetWidth;
+	var resumeButtonWidth = document.getElementById('resume-menu-button').offsetWidth;
+	var faqButtonWidth = document.getElementById('faq-menu-button').offsetWidth;
+	var loginButtonWidth = document.getElementById('login-menu-button').offsetWidth;
+	var navArrowPosition, backgroundPosition;
+	
+	$('#jobs-menu-button').click(function(){
+		navArrowPosition = logoWidth + jobsButtonWidth/2 - 9;	// logo width plus border width plus half of jobs button width minus half of navarrow width
+		backgroundPosition = navArrowPosition.toString() + 'px 100%';
+		$('#nav-arrow').css('background-position', backgroundPosition);
+	});
+	
+	$('#resume-menu-button').click(function(){
+		navArrowPosition = logoWidth + jobsButtonWidth + resumeButtonWidth/2 - 9;
+		backgroundPosition = navArrowPosition.toString() + 'px 100%';
+		$('#nav-arrow').css('background-position', backgroundPosition);
+	});
+	
+	$('#faq-menu-button').click(function(){
+		navArrowPosition = logoWidth + jobsButtonWidth + resumeButtonWidth + faqButtonWidth/2 - 9;
+		backgroundPosition = navArrowPosition.toString() + 'px 100%';
+		$('#nav-arrow').css('background-position', backgroundPosition);
+	});
+	
+	$('#login-menu-button').click(function(){
+		navArrowPosition = logoWidth + jobsButtonWidth + resumeButtonWidth + faqButtonWidth + loginButtonWidth/2 - 9;
+		backgroundPosition = navArrowPosition.toString() + 'px 100%';
+		$('#nav-arrow').css('background-position', backgroundPosition);
+	});
+	
+	
+	// qtip
+	var qtipHtml = "";
+	
+	qtipHtml = "<%= j render 'pages/search_jobs_form' %>";
+	$('#jobs-menu-button').qtip(
+	{
+		content: {
+			text: qtipHtml
+		},
+		position: {
+			corner: {
+				target: 'bottomLeft',
+				tooltip: 'topLeft'
+			},
+			adjust: { x: 0, y: 11 }
+		},
+		show: {
+			when: { event: 'click' },
+			solo: true 				// Only show one tooltip at a time
+		},
+		hide: {
+			when: { event: 'unfocus' },
+			effect: { type: 'fade', length: 1 }			
+		},
+		events: {
+			//render: function() {
+			//	$("a.qtip-link").click(function(){
+			//		$('#jobs-menu-button').qtip('api').hide(); 			// dismisses qtip on click of Search Jobs button
+			//	});
+			//}
+		},
+		style: {
+			width: {
+	            min: 0,
+	            max: 640
+	        },
+			classes: 'qtip-custom'
+		}
+	})
+	
+	qtipHtml = "<%= j render 'pages/login_form' %>";
+	$('#login-menu-button').qtip(
+	{
+		content: {
+			text: qtipHtml
+		},
+		position: {
+			corner: {
+				target: 'bottomLeft',
+				tooltip: 'topLeft'
+			},
+			adjust: { x: 0, y: 11 }
+		},
+		show: {
+			when: { event: 'click' },
+			solo: true 				// Only show one tooltip at a time
+		},
+		hide: {
+			when: { event: 'unfocus' },
+			effect: { type: 'fade', length: 10 }			
+		},
+		events: {
+			//render: function() {
+			//	$("a.qtip-link").click(function(){
+			//		$('#login-menu-button').qtip('api').hide(); 			// dismisses qtip on click of Search Jobs button
+			//	});
+			//}
+		},
+		style: {
+			width: {
+	            min: 0,
+	            max: 240
+	        },
+			classes: 'qtip-custom'
+		}
+	})
+	
+});
+</script>

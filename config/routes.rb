@@ -1,4 +1,15 @@
 Nycjobhub::Application.routes.draw do
+  
+  #resources :resumes
+  #resources :educations
+  #resources :experiences
+  #resources :tasks
+  #resources :subtasks
+  #resources :skillcategories
+  #resources :skills
+  
+  root :to => 'pages#home'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
