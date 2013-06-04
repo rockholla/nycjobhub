@@ -56,3 +56,5 @@ gem 'yaml_db'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'hashie'
