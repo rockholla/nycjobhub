@@ -1,3 +1,15 @@
+require 'base'
+require 'nycjobs'
+require 'dcafec'
+
 class Listing < ActiveRecord::Base
     attr_accessible :uid, :source_name, :source_type, :source_id, :title, :description, :location, :listed_on, :full
+
+    include Tire::Model::Search
+    include Tire::Model::Callbacks
+
+    def self.sync_all
+        Connectors::Nycjobs.new.sync()
+        Connectors::Dcafec.new.sync()
+    end
 end

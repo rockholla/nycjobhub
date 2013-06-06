@@ -8,6 +8,7 @@ module Connectors
     class Base
 
         SOURCE_TYPE_JOB = 'job'
+        SOURCE_TYPE_CENTER = 'center'
 
         def initialize(config = {})
             @config = config.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}

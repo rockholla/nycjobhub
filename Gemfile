@@ -57,4 +57,5 @@ gem 'yaml_db'
 # To use debugger
 # gem 'debugger'
 
-gem 'hashie'
+gem 'whenever', :require => false
+gem 'tire'
