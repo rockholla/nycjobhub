@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602050115) do
+ActiveRecord::Schema.define(:version => 20130606020932) do
 
   create_table "educations", :force => true do |t|
     t.string   "resume_id"
@@ -40,6 +40,20 @@ ActiveRecord::Schema.define(:version => 20130602050115) do
     t.string   "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "listings", :force => true do |t|
+    t.string   "uid"
+    t.string   "source_name"
+    t.string   "source_type"
+    t.string   "source_id"
+    t.string   "title"
+    t.text     "description"
+    t.string   "location"
+    t.datetime "listed_on"
+    t.text     "full"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "resumes", :force => true do |t|

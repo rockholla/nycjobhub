@@ -3,9 +3,11 @@ require 'nycjobs'
 
 class NycjobsTest < ActiveSupport::TestCase
 
-  test "search" do
-     connector = Connectors::Nycjobs.new
-     assert_equal true, connector.search(Resume.new).is_a?(Array)
+  test "sync" do
+     connector  = Connectors::Nycjobs.new
+     result     = connector.sync()
+     assert_equal true, result.is_a?(Array)
+     assert result.count > 0
   end
 
 end
