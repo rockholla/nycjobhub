@@ -1,0 +1,39 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	// Workshop radio buttons
+	$('#near-dropdown').change(function() {
+		
+		var dropdownSelection = $("#near-dropdown").children("option").is("selected").text();
+		
+		if dropdownSelection=="Search near an address"
+		{
+			$('#location-fields').html(<%= j render :partial => 'pages/near_address_fields' %>);
+		}
+		else
+		{
+			$('#location-fields').html(<%= j render :partial => 'pages/near_stop_fields' %>);
+		}
+	});
+	
+
+});
+</script>
+
+<%= form_tag( root_path, :method=>'post', :remote => true, :id => "search_form" ) do %>
+
+	<%= text_field_tag( 'keywords', nil, {  :size => 50 }) %>
+	
+	<ul>
+		<li><%= radio_button_tag('listing_type', 0, @listing_type_searched==0, {:id => "jobs-radio-button"}) %>Jobs</li>
+		<li><%= radio_button_tag('listing_type', 1, @listing_type_searched==1, {:id => "fec-radio-button"}) %>Financial Empowerment Centers</li>
+	</ul>
+	
+	<%= select_tag( 'near', options_for_select(NEAR_OPTIONS), :id => "near-dropdown" ) %>
+	
+	<div id="location-fields">
+		<%= render :partial => "pages/near_address_fields" %>
+	</div>			
+
+	<%= submit_tag( 'Search', {:disable_with => "Searching...", :style => 'float:right;'})  %>
+<% end %>

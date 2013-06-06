@@ -1,14 +1,31 @@
 Nycjobhub::Application.routes.draw do
   
-  #resources :resumes
-  #resources :educations
-  #resources :experiences
-  #resources :tasks
-  #resources :subtasks
-  #resources :skillcategories
-  #resources :skills
-  
   root :to => 'pages#home'
+  
+  resources :users
+  match '/signup',  to: 'users#new'
+  
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  
+  match '/dashboard',  to: 'pages#dashboard'
+  
+  # Resume resources
+  resources :resumes, only: [:create, :edit, :destroy]
+  match '/add',  to: 'resumes#create'
+  match '/edit',  to: 'resumes#edit'
+  
+  resources :educations, only: [:index, :create, :edit, :destroy]
+  match '/educations',  to: 'educations#index'
+  match '/addeducation',  to: 'educations#create'
+  
+  resources :experiences, only: [:index, :create, :edit, :destroy]
+  match '/experiences',  to: 'experiences#index'
+  #match '/experience',  to: 'experiences#new'
+  #resources :tasks
+  #resources :skills
+  #match '/skill',  to: 'skills#new'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

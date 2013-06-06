@@ -1,12 +1,19 @@
 class ExperiencesController < ApplicationController
   
+  def new
+    @title = "Experience"
+    @experience = Experience.new
+  end
+  
   def create
     @experience = Experience.new(params[:education])
     
     if @experience.save
       flash[:success] = "Experience Data Entered"
+      redirect_to :controller => 'skills',:action => 'new'
     else
       flash[:error] = "Experience Data Entry Failed"
+      render 'new'
     end
   end
   

@@ -4,6 +4,23 @@ class PagesController < ApplicationController
     @title = "Home"
   end
   
+  def search  # only called with JS
+    # params[:listing_type]
+    # params[:near]
+    # params[:address] OR params[:subway_line]
+    # if params[:subway_line], the params[:subway_stop]
+    # if params[:address], then params[:within_radius]
+    # if params[:subway_line] and params[:subway_stop], then params[:within_stops]
+    # params[:keywords]
+    
+  end
+  
+  def dashboard
+    if !signed_in?
+      redirect_to signup_path   # takes you to page with both sign in and sign up options
+    end
+  end
+  
   def search_options   # renders dropdown containing radio buttons/check boxes to select job search options
     @title = "Search Options"
   end

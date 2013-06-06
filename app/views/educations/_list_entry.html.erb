@@ -1,0 +1,16 @@
+<li id="education_<%= @education.id.to_s %>">
+	<%= simple_form_for education, :remote => true do |f| %>
+		<%= f.input :school_name, :label => false, :placeholder => "School name", :input_html => { :size => 20, :maxlength => 20 }, :class => "input-block-level" %>
+		<%= f.input :city, :label => false, :placeholder => "City where school is", :input_html => { :size => 20, :maxlength => 20 }, :class => "input-block-level" %>
+		<%= f.input :state, :collection => STATES, :label => false, :placeholder => "NY", :input_html => { :style => "width:66px;" }, :class => "input-block-level" %>
+		<%= f.input :start_date, :as => :date, :label => false, :placeholder => "Start date", :class => "input-block-level" %>
+		<%= f.input :end_date, :as => :date, :label => false, :placeholder => "End date", :class => "input-block-level" %>
+		<%= f.input :major, :label => false, :placeholder => "Major", :input_html => { :size => 10, :maxlength => 10, :style => "width:120px;" }, :class => "input-block-level" %>
+		<%= f.input :minor, :label => false, :placeholder => "Minor", :input_html => { :size => 10, :maxlength => 10 }, :class => "input-block-level" %>
+		<%= f.input :degree, :label => false, :placeholder => "Degree (e.g. HS Diploma, B.S., etc)", :input_html => { :size => 40, :maxlength => 40 }, :class => "input-block-level" %>
+		<%= f.input :gpa, :label => false, :placeholder => "GPA (out of 4.0)", :class => "input-block-level" %>
+		<%= f.input :honor_1, :label => false, :placeholder => "Honor", :class => "input-block-level" %>
+		<%= f.input :honor_2, :label => false, :placeholder => "Another honor", :class => "input-block-level" %>
+		<%= f.button :submit, "Save Edits", :class => "btn btn-small btn-primary pull-right", :title => "Save your edits" %>
+	<% end %>
+</li>

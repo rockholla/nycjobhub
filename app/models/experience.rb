@@ -3,4 +3,6 @@ class Experience < ActiveRecord::Base
   
   belongs_to :resume
   has_many :tasks, :dependent => :destroy
+  
+  default_scope :order => 'experiences.end_date DESC'
 end

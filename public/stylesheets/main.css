@@ -17,9 +17,11 @@ h4 {
 #header {
     height: 80px;
 	background-color: #fff;
+	border-bottom: 1px solid #EEEEEE;
 }
 #header-content {
 	float: left;
+	width: 100%;
     padding: 0px;
 }
 #logo {
@@ -74,7 +76,6 @@ h4 {
     display: block;
     padding: 9px 11px;
 	text-decoration: none;
-	outline: 0;
 }
 #menu-main li a strong {
     color: #9fc52f !important;
@@ -114,6 +115,7 @@ h4 {
 	z-index: 2;
 	background: transparent url(../images/navarrow.png) no-repeat -1000em top;
 }
+/***********************************QTIP******************************************/
 .qtip-content {
 	margin:0;
 	padding:0;
@@ -175,8 +177,93 @@ h4 {
     top: 80px;			/* height of header */
 	bottom: 36px;		/* height of footer */
 	z-index: -100;
+	background-color: #eeeeee;
 }
 #map-canvas {
+}
+#main-content-wrapper {
+	margin: 0 auto;
+	width: 800px;
+	height:100%;
+}
+#main-content {
+	float:left;
+	margin: 0;
+	padding: 0;
+	width: 800px;
+	height: 484px;	/* 600 - 80 - 36 */
+	background-color: #fff;
+}
+/****************************SIDEBAR**********************************************************/
+#sidebar {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+}
+#search-form {
+    border-bottom: 2px solid #CCCCCC;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#listings ul {
+	list-style: none outside none;
+}
+#listings li {
+    /* background-color: #FFFFFF !important; */
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+	color: #666666;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+/*******************************MISC COMPONENT STYLES******************************************/
+/* this isn't used but serves as a reminder that the resume builder pages content should take up 390px height wise and should include margins cosidering 800px container width
+.rb-content {
+	float: left;
+	width: 800px;
+	height: 390px;
+	padding: 0;
+	margin: 0;
+}*/
+.rb-nav {
+	float:left;
+	width: 780px;
+	padding: 10px;
+}
+form.session, form.new_user {
+	float: left;
+	width: 220px;
+	padding: 40px;
+	margin: 50px;
+	border-radius: 6px;
+	background-color: #eeeeee;
+}
+.nav-stacked a.first-row {
+	color: #fff;
+	background-color: #37c1f0;
+}
+.nav-stacked a.first-row:hover {
+	color: #fff;
+	background-color: #37c1f0;
+}
+#new_resume {
+	float: left;
+	width: 480px;
+}
+.simple_form div.input {
+  	float: left;
+	padding-right: 20px;
+}
+.gray-rounded {
+	border-radius: 6px;
+	background-color: #eeeeee;
 }
 /*************************FAILURES AND NOT BEING USED STUFF BELOW***************************
 /*

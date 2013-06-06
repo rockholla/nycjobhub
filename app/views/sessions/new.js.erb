@@ -1,0 +1,39 @@
+$('#login-menu-button').qtip(
+{
+	content: {
+		text: "<%= j render :partial => 'sessions/new.html.erb' %>"
+	},
+	position: {
+		corner: {
+			target: 'bottomRight',
+			tooltip: 'topRight'
+		},
+		adjust: { x: 0, y: 11 }
+	},
+	show: {
+		// when: { event: 'click' },
+		when: false,
+		solo: true 				// Only show one tooltip at a time
+	},
+	hide: {
+		when: { event: 'unfocus' },
+		// when: false,
+		effect: { type: 'fade', length: 10 }			
+	},
+	events: {
+		//render: function() {
+		//	$("a.qtip-link").click(function(){
+		//		$('#login-menu-button').qtip('api').hide(); 			// dismisses qtip on click of Search Jobs button
+		//	});
+		//}
+	},
+	style: {
+		width: {
+            min: 0,
+            max: 480
+        },
+		classes: 'qtip-custom'
+	}
+})
+
+$('#login-menu-button').qtip("show"); // Shows the tooltip

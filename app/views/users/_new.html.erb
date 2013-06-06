@@ -1,0 +1,9 @@
+<%= simple_form_for User.new do |f| %>
+	<h4>Please sign up</h4>
+
+	<%= f.input :email, :label => false, :placeholder => "Email address", :class => "input-block-level" %>
+	<%= f.input :password, :label => false, :placeholder => "Password", :class => "input-block-level" %>
+	<%= f.input :password_confirmation, :label => false, :placeholder => "Confirm password", :class => "input-block-level" %>
+	
+	<%= f.button :submit, "Sign Up", :class => "btn btn-large btn-primary" %>
+<% end %>

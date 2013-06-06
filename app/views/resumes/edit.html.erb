@@ -1,0 +1,38 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('#contact-info-nav').addClass("active");
+});
+</script>
+
+<div id="main" role="main">
+	<div id="main-content-wrapper">
+		<div id="main-content">
+			
+			<%= simple_form_for @resume do |f| %>
+			
+				<div class="gray-rounded" style="float:left;width:480px;height:240px;padding:20px 0 20px 20px;margin:40px 0px 70px 150px;">
+					<%= f.input :first_name, :label => false, :placeholder => "First name", :input_html => { :size => 20, :maxlength => 20 }, :class => "input-block-level" %>
+					<%= f.input :last_name, :label => false, :placeholder => "Last name", :input_html => { :size => 20, :maxlength => 20 }, :class => "input-block-level" %>
+					<%= f.input :address, :label => false, :placeholder => "Address", :input_html => { :size => 40, :maxlength => 40, :style => "width:446px;" }, :class => "input-block-level" %>
+					<%= f.input :city, :label => false, :placeholder => "New York", :input_html => { :size => 20, :maxlength => 20 }, :class => "input-block-level" %>
+					<%= f.input :state, :collection => STATES, :label => false, :selected => "NY", :input_html => { :style => "width:66px;" }, :class => "input-block-level" %>
+					<%= f.input :zip, :label => false, :placeholder => "Zip", :input_html => { :size => 10, :maxlength => 10, :style => "width:120px;" }, :class => "input-block-level" %>
+					<%= f.input :phone, :label => false, :placeholder => "Phone", :input_html => { :size => 10, :maxlength => 10 }, :class => "input-block-level" %>
+					<%= f.input :email, :label => false, :placeholder => "Email", :input_html => { :size => 40, :maxlength => 40 }, :class => "input-block-level" %>
+					<%= f.input :alt_tag_1, :label => false, :placeholder => "URL (optional)", :class => "input-block-level" %>
+					<%= f.input :alt_1, :label => false, :placeholder => "Github (optional)", :class => "input-block-level" %>
+				</div>
+				
+				<div class="rb-nav">
+					<%= link_to "Go to dashboard", dashboard_path, :class => "btn btn-large btn-primary pull-left", :style => "width:200px;", :title => "Go back to dashboard" %>
+
+					<%= f.button :submit, "Save and Continue", :class => "btn btn-large btn-primary pull-right", :style => "width:240px;", :title => "Save your edits" %>
+				</div>
+				
+			<% end %>
+			
+			<%= render :partial => 'layouts/resume_builder_nav.html.erb' %>
+		</div>
+	</div>
+</div>

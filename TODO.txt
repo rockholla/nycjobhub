@@ -1,0 +1,6 @@
+1. Fix qtip dropdowns
+2. Make resume screens
+3. Googlemapper class
+4. Watch simple form (again) and client side validations railscasts
+
+Finish making 

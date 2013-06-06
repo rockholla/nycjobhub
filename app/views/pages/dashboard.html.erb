@@ -1,0 +1,39 @@
+<div id="main" role="main">
+	<div id="main-content-wrapper">
+		<div id="main-content">
+			
+			<div id="resumes-container" style="float:left;width:360px;margin:20px;">
+				<%= link_to "Click to create a resume", add_path, :remote => true, :class => "btn btn-large btn-primary", :style => "float:left;width:320px;height:22px;margin:0;" %>
+				<ul id="resumes" class="nav nav-tabs nav-stacked" style="float:left;width:100%;margin:0;">
+					<% if !current_user.resumes.empty? %>
+						<% current_user.resumes.each do |resume| %>
+							<% if resume.is_empty? %>
+								<li id="resume_<%= resume.id.to_s %>">
+									<%= link_to "I'm an empty resume! Fill me in!", {:controller => "resumes",:action => "edit",:id => resume.id }, :title => "Build your Resume" %>
+								</li>
+							<% else %>
+								<li id="resume_<%= resume.id.to_s %>">
+									<%= link_to "I'm not empty! Edit me!", {:controller => "resumes",:action => "edit",:id => resume.id }, :title => "Build your Resume" %>
+								</li>
+							<% end %>
+						<% end %>
+					<% end %>
+				</ul>
+			</div>
+			
+			<div id="bookmarks-container" style="float:right;width:360px;margin:20px;">
+				<%= link_to "Bookmarked Jobs and Services", '#', :class => "btn btn-large btn-primary", :style => "float:left;width:320px;height:22px;margin:0;", :disabled => :disabled %>
+				<ul id="resumes" class="nav nav-tabs nav-stacked" style="float:left;width:100%;margin:0;">
+					<% if !current_user.bookmarks.empty? %>
+						<% current_user.bookmarks.each do |bookmark| %>
+							<li id="bookmark_<%= bookmark.id.to_s %>">
+								<%= link_to "This job doesn't suck that much", '#', :title => "View this listing" %>
+							</li>
+						<% end %>
+					<% end %>
+				</ul>
+			</div>			
+			
+		</div>
+	</div>
+</div>

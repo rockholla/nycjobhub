@@ -2026,11 +2026,11 @@
             min: 0,
             max: 640
          },
-         padding: '5px 9px',
+         padding: '20px 20px',
          border: {
-            width: 0,
+            width: 1,
             radius: 0,
-            color: '#d3d3d3'
+            color: '#EEEEEE'
          },
          tip: {
             corner: false,

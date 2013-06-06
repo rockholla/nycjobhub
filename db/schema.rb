@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602050115) do
+ActiveRecord::Schema.define(:version => 20130606022421) do
+
+  create_table "bookmarks", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "listing_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "educations", :force => true do |t|
     t.string   "resume_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.date     "start_date"
+    t.date     "end_date"
     t.string   "school_name"
     t.string   "city"
     t.string   "state"
@@ -32,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20130602050115) do
 
   create_table "experiences", :force => true do |t|
     t.string   "resume_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.date     "start_date"
+    t.date     "end_date"
     t.string   "employer"
     t.string   "city"
     t.string   "state"
@@ -42,7 +49,13 @@ ActiveRecord::Schema.define(:version => 20130602050115) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "listings", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "resumes", :force => true do |t|
+    t.integer  "user_id"
     t.string   "last_name"
     t.string   "first_name"
     t.string   "address"
@@ -59,22 +72,8 @@ ActiveRecord::Schema.define(:version => 20130602050115) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "skillcategories", :force => true do |t|
-    t.string   "resume_id"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "skills", :force => true do |t|
-    t.string   "skillcategory_id"
-    t.string   "description"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
-
-  create_table "subtasks", :force => true do |t|
-    t.integer  "task_id"
+    t.string   "resume_id"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -86,5 +85,15 @@ ActiveRecord::Schema.define(:version => 20130602050115) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "remember_token"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

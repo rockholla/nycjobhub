@@ -1,0 +1,3 @@
+<li id="resume_<%= @resume.id.to_s %>">
+	<%= link_to raw("<i class=\"icon-chevron-right\"></i>I'm an empty resume! Fill me in!"), {:controller => "resumes", :action => "edit", :id => @resume.id }, :title => "Build your Resume" %>
+</li>

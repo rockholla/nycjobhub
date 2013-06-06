@@ -1,0 +1,7 @@
+<ul id="listings">
+	
+	<% @listings.each do |listing| %>
+		<% link_to raw("<li></li>"), nil, :remote => true, :class => nil %>
+	<% end %>
+	
+</ul>

@@ -1,0 +1,21 @@
+<!-- Twitter Bootstrap sign in form example
+<form class="form-signin">
+	<h2 class="form-signin-heading">Please sign in</h2>
+	<input class="input-block-level" type="text" placeholder="Email address">
+	<input class="input-block-level" type="password" placeholder="Password">
+	<label class="checkbox">
+		<input type="checkbox" value="remember-me">
+		Remember me
+	</label>
+	<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+</form>
+-->
+
+<%= simple_form_for(:session, url: sessions_path) do |f| %>
+	<h4>Please sign in</h4>
+	
+  	<%= f.input :email, :label => false, :placeholder => "Email address", :class => "input-block-level" %>
+  	<%= f.input :password, :label => false, :placeholder => "Password", :class => "input-block-level" %>
+
+  	<%= f.submit "Sign in", :class => "btn btn-large btn-primary" %>
+<% end %>

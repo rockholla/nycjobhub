@@ -1,5 +1,5 @@
 class Skill < ActiveRecord::Base
-  attr_accessible :skillcategory_id,:description
+  attr_accessible :resume_id,:description
   
-  belongs_to :skillcategory
+  belongs_to :resume
 end

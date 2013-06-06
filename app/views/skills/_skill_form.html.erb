@@ -1,0 +1,25 @@
+<div id="main" role="main">
+	<div id="main-content-wrapper">
+		<div id="main-content">
+			
+			<%= simple_form_for @skill do |f| %>
+			
+				<div style="float:left;width:500px;height:336px;margin:20px 0px 0px 160px;">
+					<h4 class="form-signin-heading">Please describe your skills.</h4>
+
+					<%= f.input :description, :as => :text, :label => false, :placeholder => "Describe your skill", :class => "input-block-level" %>
+				</div>
+				
+				<div style="float:left;width:760px;padding:20px 20px 10px 20px;">
+					<%= link_to "Go back to dashboard", dashboard_path, :class => "btn btn-large btn-primary pull-left", :title => "Go back to dashboard" %>
+
+					<%= f.button :submit, "Save and Continue", :class => "btn btn-large btn-primary pull-right" %>
+				</div>
+				
+				
+			<% end %>
+			
+			<%= render :partial => 'layouts/resume_builder_nav.html.erb' %>
+		</div>
+	</div>
+</div>

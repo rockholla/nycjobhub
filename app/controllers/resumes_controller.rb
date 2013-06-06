@@ -1,31 +1,29 @@
 class ResumesController < ApplicationController
   
-  def create
-    @resume = Resume.new(params[:resume])
-    
+  def create    # quick add executed on dashboard
+    @resume = Resume.new
+    @resume.user_id = current_user.id
     if @resume.save
       flash[:success] = "Resume Created"
     else
       flash[:error] = "Resume Creation Failed"
+      redirect_to dashboard_path
     end
+  end
+  
+  def edit
+    @title = "Build your resume"
+    @resume = Resume.find(params[:id])
   end
   
   def update
     @resume = Resume.find(params[:id])
-    
-    respond_to do |format|
-      if @resume.update_attributes(params[:resume])
-        flash[:success] = "Resume Updated"
-      else
-        flash[:error] = "Resume Update Failed"
-      end
-      
-      #format.html {
-      #  redirect_to project_path
-      #}
-      format.json { 
-        respond_with_bip(@resume)
-      }
+    if @resume.update_attributes(params[:resume])
+      flash[:success] = "Resume Updated"
+      redirect_to :controller => "educations", :action => "index", :id => @resume.id
+    else
+      flash[:error] = "Resume Update Failed"
+      render 'edit'
     end
   end
   

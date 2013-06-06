@@ -23,7 +23,9 @@ gem 'rake'
 
 gem 'yaml_db'
 
-# gem 'simple_form'
+gem 'bcrypt-ruby', '3.0.1'
+
+gem 'simple_form'
 
 # gem 'best_in_place', '~> 2.0.2'
 
@@ -36,11 +38,15 @@ gem 'yaml_db'
 
 # gem 'dropbox-api'
 
-# gem "colorbox-rails"
+gem "colorbox-rails"
 
 # gem "libxml-ruby", "~> 2.6.0"
 
 # gem "whenever", "~> 0.8.2"
+
+group :development do
+  gem 'annotate', '2.5.0'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
