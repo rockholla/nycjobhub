@@ -196,31 +196,50 @@ h4 {
 }
 /****************************SIDEBAR**********************************************************/
 #sidebar {
-    background-color: #FFFFFF;
-    color: #FFFFFF;
     height: 100%;
     overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
     width: 250px;
+	background-color: #FFFFFF;
 }
 #search-form {
-	float:;
+	float: left;
+    padding: 10px 15px;
     margin: 0;
-    padding: 0;
-	
+    width: 220px;
+	height: 270px;
+	background-color: #e2008c;
+	border-bottom: 1px solid #EEEEEE;
 }
-#listings ul {
-	list-style: none outside none;
+.search-dropdown {
+	float: left;
+	margin: 0px 0px 10px 0px;
+}
+#location-fields {
+	float: left;
+	margin: 0;
+}
+#listings {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 250px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	
 }
 #listings li {
     /* background-color: #FFFFFF !important; */
+	list-style-image: none;
+    list-style-type: none;
+	float: left;
+	margin: 0;
+    padding: 5px;
+	width: 240px;
+	height: 44px;
     font-size: 12px;
-    margin: 0;
-    padding: 0;
 	color: #666666;
 	border-bottom: 1px solid #EEEEEE;
 }
@@ -242,8 +261,7 @@ h4 {
 form.session, form.new_user {
 	float: left;
 	width: 220px;
-	padding: 40px;
-	margin: 50px;
+	padding: 20px;
 	border-radius: 6px;
 	background-color: #eeeeee;
 }

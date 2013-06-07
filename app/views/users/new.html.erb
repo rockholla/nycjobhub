@@ -1,10 +1,14 @@
 <div id="main" role="main">
 	<div id="main-content-wrapper">
 		<div id="main-content">
+			
+			<div style="float:left;margin:70px;">
+				<%= render :partial => 'sessions/new.html.erb' %>
+			</div>
 
-			<%= render :partial => 'sessions/new.html.erb' %>
-
-			<%= render :partial => 'users/new.html.erb' %>
+			<div style="float:left;margin:70px;">
+				<%= render :partial => 'users/new.html.erb' %>
+			</div>
 
 		</div>
 	</div>

@@ -1,0 +1,162 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	resizeMap();							// this resizes #main, #map-canvas and #listings to take up the window
+	
+	/**
+	 * Data for the markers consisting of a name, a LatLng and a zIndex for
+	 * the order in which these markers should display on top of each
+	 * other.
+	 * Fucntion to convert address to LatLng?
+	 */
+	var listings = [
+	  ['Patrick and Daisy', 40.776521, -73.909134, 10],
+	  ['Me', 40.673711, -73.962522, 9],
+	];
+	
+	
+	function setMarkers(map, locations) {
+	  // Add markers to the map
+
+	  // Marker sizes are expressed as a Size of X,Y
+	  // where the origin of the image (0,0) is located
+	  // in the top left of the image.
+
+	  // Origins, anchor positions and coordinates of the marker
+	  // increase in the X direction to the right and in
+	  // the Y direction down.
+	  var image = {
+	    url: 'images/little_bunny.png',
+	    // little_bunny is 16 pixels wide by 19 pixels tall.
+	    size: new google.maps.Size(16, 19),
+	    // The origin for this little_bunny is 0,0.
+	    origin: new google.maps.Point(0,0),
+	    // The anchor for this little_bunny is around the middle
+	    anchor: new google.maps.Point(8, 9)
+	  };
+	  // Shapes define the clickable region of the icon.
+	  // The type defines an HTML &lt;area&gt; element 'poly' which
+	  // traces out a polygon as a series of X,Y points. The final
+	  // coordinate closes the poly by connecting to the first
+	  // coordinate.
+	  var shape = {
+	      coord: [1, 1, 1, 18, 15, 18, 15, 1],
+	      type: 'poly'
+	  };
+	  for (var i = 0; i < locations.length; i++) {
+	    var loc = locations[i];
+	    var latLng = new google.maps.LatLng(loc[1], loc[2]);
+	    var marker = new google.maps.Marker({
+	        position: latLng,
+	        map: map,
+	        icon: image,
+	        shape: shape,
+	        title: loc[0],
+	        zIndex: loc[3]
+	    });
+	  }
+	}
+
+	/*
+	function addressToLatLng(address) {		// address string to latlng--a two member array of floats
+
+	  geocoder.geocode( { 'address': address}, function(results, status) {
+	    if (status == google.maps.GeocoderStatus.OK) {
+	      map.setCenter(results[0].geometry.location);
+	      var marker = new google.maps.Marker({
+	          map: map,
+	          position: results[0].geometry.location
+	      });
+	    } else {
+	      alert('Geocode was not successful for the following reason: ' + status);
+	    }
+	  });
+	}
+	*/
+	
+	var map;
+	var geocoder;
+	
+  	function initialize() {					// initialize googlemaps
+		
+		geocoder = new google.maps.Geocoder();
+		
+		var mapStyle = [
+		{
+			featureType: "road",
+			elementType: "geometry",
+			stylers: [
+				{ hue: "#ffffff" },
+				{ lightness: 100 }
+			]
+		},
+		{
+			featureType: "road",
+			elementType: "labels",
+			stylers: [
+				{ visibility: "on" },
+				{ lightness: 6 },
+				{ hue: "#fff700" }
+			]
+		},
+		{
+			featureType: "water",
+			stylers: [
+				{ hue: "#89cff0" }
+			]
+		},
+		{
+			featureType: "transit.line",
+			stylers: [
+				{ visibility: "on" }
+			]
+		}
+		];
+	
+    	var mapOptions = {
+			center: new google.maps.LatLng(40.7346688,-73.9897484),
+			zoom: 13,
+			minZoom: 12,
+			maxZoom: 20,
+			panControl: false,
+			zoomControl: true,
+			zoomControlOptions: {
+				style: google.maps.ZoomControlStyle.SMALL
+			},
+			mapTypeControl: false,
+			scaleControl: false,
+			streetViewControl: false,
+			overviewMapControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			styles: mapStyle
+		};
+	
+    	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+		setMarkers(map, listings);
+  	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);	// initialize is called on window load
+	
+	// load googlemap
+	function resizeMap() {
+		var h = $(window).height();
+		var w = $(window).width();
+		var sidebarWidth = $("#sidebar").width();
+		$("#main").height(h - $("#header").height() - $("#credits").height());
+		$("#map-canvas").height($("#main").height());		// #map-canvas height==#main height
+		$("#map-canvas").width(w - sidebarWidth);
+		
+		console.log($("#map-canvas").height().toString());
+		console.log($("#map-canvas").width().toString());
+		
+		$("#listings").height($("#main").height() - $("#search-form").height());	// this line resizes the height of #listings
+		console.log($("#listings").height().toString());
+	}
+	
+	$(window).bind("resize", function(){		// resizeMap is called on window resize
+		resizeMap();
+	});
+	
+});
+</script>

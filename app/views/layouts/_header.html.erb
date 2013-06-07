@@ -1,36 +1,30 @@
 <div id="header">
 	<div id="header-content">
 		<div id="logo">
-			<%= link_to image_tag("logo_vert_h60.png", :alt => "NYC JOB HUB"), root_path %>
+			<%= link_to image_tag("logo_vert_h60.png", :alt => "NYC JOB HUB"), root_path, :title => "Go to home page" %>
 		</div>
 		
 		<ul id="menu-main" style="position:absolute;right:0;left:81px;">
-			<li id="jobs-menu-button" class="jobs" style="border-right:0;">
-				<%= link_to raw("<strong>Search</strong><span>for jobs</span>"), '#'  %>
-			</li>
 			
-			<li id="resume-menu-button" class="resume" style="border-right:0;">
+			<li id="resume-menu-button" class="resume">
 				<%= link_to raw("<strong>Build</strong><span>your resume</span>"), {:controller => "pages", :action => "dashboard" }, :title => "Build your Resume" %>
 			</li>
 			
-			<li id="jobs-menu-button" class="services">
-				<%= link_to raw("<strong>Find Support</strong><span>services in NYC</span>"), '#'  %>
-			</li>
+			<% if signed_in? %>
+				<li id="logout-menu-button" class="login" style="float:right;border-right:0;">
+					<%= link_to raw("<strong>Log Out</strong><span>of your account</span>"), signout_path, :title => "Sign Out" %>
+				</li>
+			<% else %>
+				<li id="login-menu-button" class="login" style="float:right;border-right:0;">
+					<%= link_to raw("<strong>Log In</strong><span>to your account</span>"), signin_path, :remote => true, :title => "Sign In" %>
+				</li>
+			<% end %>
 			
-			<li id="login-menu-button" class="login" style="float:right;border-right:0;">
-				<%= link_to raw("<strong>Log In</strong><span>to your account</span>"), signin_path, :remote => true, :title => "Sign In" %>
-			</li>
 			
 			<li id="faq-menu-button" class="faq" style="float:right;border-right:0;">
-				<%= link_to raw("<strong>Questions</strong><span>frequently asked</span>"), '#' %>
+				<%= link_to raw("<strong>Questions</strong><span>frequently asked</span>"), '#', :title => "Frequently asked questions" %>
 			</li>
 			
-			<form class="navbar-search pull-right" style="margin:25px;">
-		    	<input type="text" class="search-query" placeholder="Search">
-		    </form>
 		</ul>
-	</div>
-	
-	<div id="nav-arrow">
 	</div>
 </div>

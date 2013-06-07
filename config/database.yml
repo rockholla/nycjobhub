@@ -27,4 +27,4 @@ test:
     database: nycjobhub_db_test
     pool: 5
     username: root
-    password: hart3557
+    password: stewart

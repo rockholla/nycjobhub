@@ -50,8 +50,17 @@ ActiveRecord::Schema.define(:version => 20130606022421) do
   end
 
   create_table "listings", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "uid"
+    t.string   "source_name"
+    t.string   "source_type"
+    t.string   "source_id"
+    t.string   "title"
+    t.text     "description"
+    t.string   "location"
+    t.datetime "listed_on"
+    t.text     "full"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "resumes", :force => true do |t|
