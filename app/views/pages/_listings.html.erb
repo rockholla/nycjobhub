@@ -1,4 +1,12 @@
-<ul id="listings">
-	<li>Here is a listing</li>
-	<li>Here is another listing</li>
-</ul>
+<% if @listing_type=="job" %>
+	<% @listings.each do |listing| %>
+		<a id="listing_<%= listing.id.to_s %>" data-remote="true" href="/detail?id=<%= listing.id.to_s %>" title="Click to view detail">
+			<span><%= listing.title %></span><br>
+			<span><%= listing.location %></span><br>
+			
+		</a>
+	<% end %>
+<% elsif @listing_type=="center" %>
+	<% @listings.each do |listing| %>
+	<% end %>
+<% end %>

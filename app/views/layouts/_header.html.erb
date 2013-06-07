@@ -1,28 +1,25 @@
 <div id="header">
 	<div id="header-content">
-		<div id="logo">
-			<%= link_to image_tag("logo_vert_h60.png", :alt => "NYC JOB HUB"), root_path, :title => "Go to home page" %>
-		</div>
+		<%= link_to image_tag("logo_h28.png", :alt => "NYC JOB HUB"), root_path, :class => "logo", :title => "Go to home page" %>
 		
-		<ul id="menu-main" style="position:absolute;right:0;left:81px;">
-			
-			<li id="resume-menu-button" class="resume">
-				<%= link_to raw("<strong>Build</strong><span>your resume</span>"), {:controller => "pages", :action => "dashboard" }, :title => "Build your Resume" %>
-			</li>
+		<ul id="menu-main" style="position:absolute;right:0;left:292px;">
 			
 			<% if signed_in? %>
-				<li id="logout-menu-button" class="login" style="float:right;border-right:0;">
+				<li id="logout-menu-button" class="login" style="border-right:0;">
 					<%= link_to raw("<strong>Log Out</strong><span>of your account</span>"), signout_path, :title => "Sign Out" %>
 				</li>
 			<% else %>
-				<li id="login-menu-button" class="login" style="float:right;border-right:0;">
+				<li id="login-menu-button" class="login" style="border-right:0;">
 					<%= link_to raw("<strong>Log In</strong><span>to your account</span>"), signin_path, :remote => true, :title => "Sign In" %>
 				</li>
 			<% end %>
 			
-			
-			<li id="faq-menu-button" class="faq" style="float:right;border-right:0;">
+			<li id="faq-menu-button" class="faq" style="border-right:0;">
 				<%= link_to raw("<strong>Questions</strong><span>frequently asked</span>"), '#', :title => "Frequently asked questions" %>
+			</li>
+			
+			<li id="resume-menu-button" class="resume" style="border-right:0;">
+				<%= link_to raw("<strong>Build</strong><span>your resume</span>"), {:controller => "pages", :action => "dashboard" }, :title => "Build your Resume" %>
 			</li>
 			
 		</ul>

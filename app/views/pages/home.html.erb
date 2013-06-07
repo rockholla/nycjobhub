@@ -1,3 +1,10 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	
+});
+</script>
+
 <%= render :partial => 'pages/gmaps_js' %>
 
 <div id="main" role="main">
@@ -40,7 +47,12 @@
 		
 		<%= render :partial => "pages/search_form" %>
 		
-		<%= render :partial => "pages/listings" %>
+		<div id="listings-container">
+			<div id="listings-title-bar"><b id="listings-size"><%= @listings.size.to_s %></b> listings matched your search</div>
+			<div id="listings">
+				<%= render :partial => 'pages/listings' %>
+			</div>
+		</div>
 		
 	</div>
 </div>

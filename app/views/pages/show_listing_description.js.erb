@@ -1,0 +1,50 @@
+var qtipHtml = '<h7><%= @listing.title %></h7>'
+	+ '<div class="listing-description-buttons">'
+	+ '<%= link_to "Bookmark this listing", bookmarkthis_path, :class => "btn btn-mini btn-primary", :style => "margin-right:10px;", :title => "Bookmark this" %>'
+	+ '<%= link_to "Go to web page", visitpage_path, :class => "btn btn-mini btn-primary", :title => "Visit web page" %>'
+	+ '<%= link_to "Yelp rating", yelp_path, :class => "btn btn-mini btn-primary pull-right", :title => "Visit web page" %>'
+	+ '</div>'
+	+ '<div class="listing-description"><%= @listing.description %></div>';
+
+$('<%= "#listing_" + @listing.id.to_s %>').qtip(
+{
+	content: {
+		text: qtipHtml
+	},
+	position: {
+		corner: {
+			target: 'leftBottom',
+			tooltip: 'rightBottom'
+		},
+		adjust: { x: -10, y: 0 }
+	},
+	show: {
+		when: false,
+		solo: true 				// Only show one tooltip at a time
+	},
+	hide: {
+		when: { event: 'unfocus' },
+		effect: { type: 'fade', length: 10 }			
+	},
+	events: {
+		//render: function() {
+		//	$("a.qtip-link").click(function(){
+		//		$('<%= "#listing-" + @listing.id.to_s %>').qtip('api').hide(); 			// dismisses qtip on click of More Info link
+		//	});
+		//}
+	},
+	style: {
+		width: {
+            min: 0,
+            max: 520
+        },
+		height: {
+            min: 0,
+            max: 380
+        },
+		classes: 'qtip-custom'
+		// classes: 'qtip-light qtip-rounded qtip-shadow grid-qtip'
+	}
+})
+
+$('<%= "#listing_" + @listing.id.to_s %>').qtip("show"); // Shows the tooltip

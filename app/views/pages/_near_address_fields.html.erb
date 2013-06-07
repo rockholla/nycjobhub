@@ -1,2 +1,2 @@
-<%= text_field_tag( 'address', nil, {  :size => 50 }) %>
-<%= select_tag( 'within_radius', options_for_select(WITHIN_RADIUS_OPTIONS) ) %>
+<%= text_field_tag( 'address', nil, {  :size => 50, :disabled => "disabled" }) %>
+<%= select_tag( 'within_radius', options_for_select(WITHIN_RADIUS_OPTIONS), :disabled => "disabled" ) %>

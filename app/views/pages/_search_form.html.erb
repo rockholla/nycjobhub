@@ -22,13 +22,13 @@ $(document).ready(function() {
 });
 </script>
 
-<%= form_tag( root_path, :method=>'post', :remote => true, :id => "search-form" ) do %>
+<%= form_tag( search_path, :method=>'post', :remote => true, :id => "search-form" ) do %>
 
 	<%= text_field_tag( 'keywords', nil, { :size => 50, :class => "search-query", :style => "width:190px;margin:5px 0px 15px 0px;", :placeholder => "Search keywords" }) %>
 	
 	<%= select_tag( 'listing_type', options_for_select(LISTING_TYPES), :class => "search-dropdown" ) %>
 	
-	<%= select_tag( 'near', options_for_select(NEAR_OPTIONS), :id => "near-dropdown", :class => "search-dropdown" ) %>
+	<%= select_tag( 'near', options_for_select(NEAR_OPTIONS), :id => "near-dropdown", :class => "search-dropdown", :disabled => "disabled" ) %>
 	
 	<div id="location-fields">
 		<%= render :partial => "pages/near_address_fields" %>

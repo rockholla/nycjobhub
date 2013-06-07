@@ -150,7 +150,7 @@ $(document).ready(function() {
 		console.log($("#map-canvas").height().toString());
 		console.log($("#map-canvas").width().toString());
 		
-		$("#listings").height($("#main").height() - $("#search-form").height());	// this line resizes the height of #listings
+		$("#listings").height($("#main").height() - $("#search-form").height() - $("#listings-title-bar").height());	// this line resizes the height of #listings
 		console.log($("#listings").height().toString());
 	}
 	

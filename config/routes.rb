@@ -15,6 +15,11 @@ Nycjobhub::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
   
   match '/dashboard',  to: 'pages#dashboard'
+  match '/search',  to: 'pages#search'
+  match '/detail',  to: 'pages#show_listing_description'
+  match '/bookmarkthis',  to: 'pages#bookmark_this'
+  match '/visitpage',  to: 'pages#visit_page'
+  match '/yelp',  to: 'pages#yelp'
   
   match '/add',  to: 'resumes#create'
   match '/edit',  to: 'resumes#edit'

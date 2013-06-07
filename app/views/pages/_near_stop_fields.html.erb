@@ -1,3 +1,3 @@
-<%= select_tag( 'subway_line', options_for_select(SUBWAY_LINES) ) %>
-<%= select_tag( 'subway_stop', options_for_select(SUBWAY_STOPS) ) %>
-<%= select_tag( 'within_stops', options_for_select(WITHIN_STOPS_OPTIONS) ) %>
+<%= select_tag( 'subway_line', options_for_select(SUBWAY_LINES), :disabled => "disabled" ) %>
+<%= select_tag( 'subway_stop', options_for_select(SUBWAY_STOPS), :disabled => "disabled" ) %>
+<%= select_tag( 'within_stops', options_for_select(WITHIN_STOPS_OPTIONS), :disabled => "disabled" ) %>

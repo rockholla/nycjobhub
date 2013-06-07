@@ -2,6 +2,11 @@ class PagesController < ApplicationController
   
   def home
     @title = "Home"
+    
+    @listings = []
+    #@listing_type = "job"
+    #@listings_tmp = Listing.where(:source_type => @listing_type)
+    #@listings = [@listings_tmp.first, @listings_tmp.last]
   end
   
   def search  # only called with JS
@@ -12,7 +17,10 @@ class PagesController < ApplicationController
     # if params[:address], then params[:within_radius]
     # if params[:subway_line] and params[:subway_stop], then params[:within_stops]
     # params[:keywords]
-    
+    @listing_type = params[:listing_type]
+    @keywords = params[:keywords]
+    @listings = Listing.search(@keywords)
+    puts @listings.size.to_s
   end
   
   def dashboard
@@ -21,24 +29,17 @@ class PagesController < ApplicationController
     end
   end
   
-  def search_options   # renders dropdown containing radio buttons/check boxes to select job search options
-    @title = "Search Options"
+  def show_listing_description
+    @listing = Listing.find(params[:id])
   end
   
-  def search_jobs   # renders dropdown containing radio buttons/check boxes to select job search options
-    @title = "Search Jobs"
+  def bookmark_this
   end
   
-  def build_resume    # launches 3/4 screen overlay
-    @title = "Resume Builder"
+  def visit_page
   end
   
-  def faq    # launches 3/4 screen overlay with Fertilla like question navigation
-    @title = "FAQ"
-  end
-  
-  def login    # renders simple dropdown for login with forgot password link 
-    @title = "Log In"
+  def yelp
   end
   
 end

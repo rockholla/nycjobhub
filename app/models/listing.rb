@@ -8,6 +8,8 @@ class Listing < ActiveRecord::Base
     belongs_to :user
     has_many :bookmarks, :dependent => :destroy
     has_many :listings, :through => :bookmarks
+    
+    default_scope :order => 'listings.listed_on DESC'
 
     include Tire::Model::Search
     include Tire::Model::Callbacks
